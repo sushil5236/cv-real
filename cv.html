@@ -1,0 +1,46 @@
+<html>
+
+<head>
+   <title>CV PROJECT</title>
+     <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <h1>GIVE THE INFORMATION FOR CV</h1><br>
+    <form action="cv1.php" method="post"> <br><br>
+        Full Name:<input type="text" name="name" id="fname" required><br><br>
+        Gender:<select name="gender" id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select><br><br>
+        Date Of Birth (BS):<input type="text" name="dob" required><br><br>
+        E-mail:<input type="text" name="email" required><br><br>
+        Age:<input type="text" name="age" required><br><br>
+        Father's Name:<input type="text" name="father" required><br><br>
+        Mother's Name:<input type="text" name="mother" required><br><br>
+        Address:  <input type="text" name="address" required><br><br>
+        Phone Number:<input type="text" name="phone" required><br><br>
+        Marital status:<select name="status" id="status" required>
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+        </select><br>
+        <hr>
+        <input type="submit">
+
+
+    </form>
+    <script>
+        window.onload = function () {
+            var data = localStorage.getItem('n');
+            if (data) {
+                document.getElementById('fname').value = data;
+            } else {
+                document.getElementById('fname').value = "No name found!";
+            }
+        }
+     
+    </script>
+</body>
+
+</html>
